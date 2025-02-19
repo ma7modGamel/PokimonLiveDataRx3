@@ -20,7 +20,8 @@ object DataBaseModule {
             MyApplication.context,
             PokemonDB::class.java,
             "pokemon_db"
-        ).build()
+        ).fallbackToDestructiveMigration()
+            .build()
     }
 
     @Provides

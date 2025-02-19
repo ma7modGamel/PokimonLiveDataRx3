@@ -7,6 +7,6 @@ import retrofit2.http.GET
 interface ApiServices {
 
 
-    @GET()
+    @GET("pokemon")
     fun getPokemonList() : Observable<PokemonResponse>
 }

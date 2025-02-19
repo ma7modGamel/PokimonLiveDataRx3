@@ -8,8 +8,5 @@ import com.safwa.application.data.models.Pokemon
 
 @Database(entities = [Pokemon::class], version = 1, exportSchema = false)
 abstract class PokemonDB : RoomDatabase() {
-
     abstract fun pokemonDao(): PokemonDao
-
-
 }

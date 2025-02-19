@@ -130,7 +130,14 @@ dependencies {
     kapt(libs.hilt.android.compiler)
     kapt(libs.hilt.android.androidx.compiler)
 
+    implementation("androidx.room:room-runtime:2.6.1") // تأكد من استخدام آخر إصدار
+    kapt("androidx.room:room-compiler:2.6.1") // تأكد من وجود kapt لمعالجة الـ Annotations
 
+    implementation("androidx.room:room-ktx:2.6.1") // دعم للكوتلن
+
+    implementation("androidx.room:room-rxjava3:2.6.1")
+    // اختياري (إذا كنت تستخدم ViewModel و LiveData)
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.1")
 
 }
 kapt {
