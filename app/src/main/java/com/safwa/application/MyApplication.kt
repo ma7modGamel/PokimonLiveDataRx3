@@ -47,9 +47,7 @@ class MyApplication : Application() {
     companion object{
         lateinit var instance: MyApplication
         lateinit var context: Context
-        fun getInstance(): MyApplication {
-            return instance
-        }
+
 
     }
 

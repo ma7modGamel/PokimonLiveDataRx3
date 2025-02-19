@@ -7,12 +7,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.safwa.application.databinding.FragmentNotificationsBinding
+import com.safwa.application.databinding.FragmentFavoriteBinding
 import com.safwa.application.ui.home.viewmodel.FavoriteViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FavoriteFragment : Fragment() {
 
-    private var _binding: FragmentNotificationsBinding? = null
+    private var _binding: FragmentFavoriteBinding? = null
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -26,7 +28,7 @@ class FavoriteFragment : Fragment() {
         val favoriteViewModel =
             ViewModelProvider(this).get(FavoriteViewModel::class.java)
 
-        _binding = FragmentNotificationsBinding.inflate(inflater, container, false)
+        _binding = FragmentFavoriteBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textNotifications
